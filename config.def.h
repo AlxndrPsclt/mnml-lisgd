@@ -23,14 +23,14 @@ char *device = "/dev/input/event1";
 
 Gesture gestures[] = {
 	/* nfingers  gesturetype  command */
-	{ 1,         SwipeLR,     EdgeAny, DistanceAny, "xdotool key --clearmodifiers Alt+Shift+e" },
-	{ 1,         SwipeRL,     EdgeAny, DistanceAny, "xdotool key --clearmodifiers Alt+Shift+r" },
+	{ 1,         SwipeLR,     EdgeAny, DistanceAny, "bspc desktop -f prev.local" },
+	{ 1,         SwipeRL,     EdgeAny, DistanceAny, "bspc desktop -f next.local" },
 	{ 1,         SwipeDLUR,   EdgeAny, DistanceAny, "sxmo_vol.sh up" },
 	{ 1,         SwipeURDL,   EdgeAny, DistanceAny, "sxmo_vol.sh down" },
 	{ 1,         SwipeDRUL,   EdgeAny, DistanceAny, "sxmo_brightness.sh up" },
 	{ 1,         SwipeULDR,   EdgeAny, DistanceAny, "sxmo_brightness.sh down" },
 	{ 2,         SwipeLR,     EdgeAny, DistanceAny, "xdotool key --clearmodifiers Alt+e" },
 	{ 2,         SwipeRL,     EdgeAny, DistanceAny, "xdotool key --clearmodifiers Alt+r" },
-	{ 2,         SwipeDU,     EdgeAny, DistanceAny, "pidof $KEYBOARD || $KEYBOARD &" },
-	{ 2,         SwipeUD,     EdgeAny, DistanceAny, "pkill -9 $KEYBOARD" },
+	{ 1,         SwipeDU,     EdgeAny, DistanceAny, "pidof svkbd || ~/apps/suckless/mnml-svkbd/keyboard &" },
+	{ 1,         SwipeUD,     EdgeAny, DistanceAny, "pkill -9 svkbd" },
 };
